@@ -73,7 +73,7 @@ function Home() {
   return <div className="app-shell">
     {mobileNav && <button className="nav-scrim" aria-label="关闭导航" onClick={() => setMobileNav(false)} />}
     <aside className={`sidebar ${mobileNav ? "open" : ""}`}>
-      <div className="brand"><span className="brand-mark">澄</span><span><b>澄明</b><small>RESEARCH DESK</small></span><button className="mobile-close" onClick={() => setMobileNav(false)} aria-label="关闭导航"><X size={20} /></button></div>
+      <div className="brand"><span className="brand-mark">澄</span><span><b>澄明</b><small>ClarSight</small></span><button className="mobile-close" onClick={() => setMobileNav(false)} aria-label="关闭导航"><X size={20} /></button></div>
       <div className="project-chip"><span>当前项目</span><b>{data.projectName}</b><small>{data.stage} · {activeMembers.length} 位成员</small></div>
       <nav>{nav.map(item => <button key={item.id} className={view === item.id ? "nav-item active" : "nav-item"} onClick={() => go(item.id)}><item.icon size={18} /><span>{item.label}</span>{item.id === "tasks" && <em>{data.tasks.filter(t => t.status !== "done").length}</em>}<ChevronRight size={14} className="nav-arrow" /></button>)}</nav>
       <div className="sidebar-bottom"><div className="method-note"><BookOpen size={16} /><p>先验证问题，再投入执行。<br />每个结论都要回到证据。</p></div><div className="user-row"><span className="avatar">{user?.name?.slice(0, 1) || "研"}</span><span><b>{user?.name || "项目成员"}</b><small>云端工作区</small></span><button onClick={logout} aria-label="退出登录"><LogOut size={17} /></button></div></div>
