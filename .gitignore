@@ -1,0 +1,14 @@
+node_modules/
+*.tsbuildinfo
+.env
+.env.local
+.env.*.local
+*.db
+*.sqlite
+*.sqlite3
+db/migrations/*.sql
+dist/
+build/
+coverage/
+.nyc_output/
+*.log
